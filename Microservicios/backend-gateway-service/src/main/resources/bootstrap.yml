@@ -1,6 +1,6 @@
 #spring:
 #  application:
-#    name: backend-eureka-service
+#    name: backend-gateway-service
 #  cloud:
 #    config:
 #      enabled: true

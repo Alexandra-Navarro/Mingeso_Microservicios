@@ -3,10 +3,10 @@ server:
 spring:
   application:
     name: backendconfig-service
-#  cloud:
-#    config:
-#      server:
-#        git:
-#          default-label: master
-#          uri: https://github.com/SimonSaezCorrea/Mingeso-Tingeso-Ayudantia
-#          search-paths: "Unidad 2/Aplicación-microservicio-básico/config-data"
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          uri: https://github.com/Alexandra-Navarro/Mingeso_Microservicios
+          search-paths: "Microservicios/config-data"
