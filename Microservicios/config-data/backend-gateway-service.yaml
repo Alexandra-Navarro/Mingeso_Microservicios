@@ -18,7 +18,7 @@ spring:
           enabled: true
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Origin, Access-Control-Allow-Credentials, RETAIN_UNIQUE
-      cors:
+      globalcors:
         cors-configurations:
           '[/**]':
             allowed-origin-patterns: '*'
