@@ -13,18 +13,8 @@ eureka:
 spring:
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
       default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Origin, Access-Control-Allow-Credentials, RETAIN_UNIQUE
-      globalcors:
-        cors-configurations:
-          '[/**]':
-            allowed-origin-patterns: '*'
-            allowed-methods: "*"
-            allowed-headers: "*"
-            allow-credentials: true
+        - DedupeResponseHeader=Access-Control-Allow-Origin, Access-Control-Allow-Credentials
       routes:
         - id: backend-estudiantes-service
           uri: lb://backend-estudiantes-service
