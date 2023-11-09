@@ -1,11 +1,10 @@
 package backendestudiantesservice.backendestudiantesservice.entity;
 
-import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.util.List;
-
+import javax.persistence.*;
 @Entity
 @Table(name = "estudiantes")
 @Data
