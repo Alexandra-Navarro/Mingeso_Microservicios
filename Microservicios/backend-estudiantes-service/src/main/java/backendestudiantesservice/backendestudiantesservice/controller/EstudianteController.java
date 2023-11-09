@@ -31,11 +31,6 @@ public class EstudianteController {
         return ResponseEntity.ok(estudianteEntities);
     }
 
-    // Formulario de registro de los alumnos (No es necesario para Postman)
-
-    // Guardar los estudiantes que se ingresan a la base de datos
-
-
     // Opción para eliminar un estudiante
     @GetMapping("/{rut}")
     public ResponseEntity<EstudianteEntity> findByRut(@PathVariable("rut") String rut) {
