@@ -25,7 +25,7 @@ public class PagoController {
     private PagoRepository pagoRepository;
 
     @GetMapping("/{rut}")
-    public ResponseEntity<?> verCuotasEstudiante(@PathVariable String rut) {
+    public ResponseEntity<?> verCuotasEstudiante(@PathVariable("rut") String rut) {
         EstudianteEntity estudiante = pagoService.buscarEstudiantePorRut(rut);
 
         if (estudiante != null) {
@@ -73,8 +73,8 @@ public class PagoController {
         return ResponseEntity.ok("Estudiante no encontrado");
     }
 
-    @PostMapping("/{rut}/pagar/{cuotaIndex}")
-    public ResponseEntity<?> pagarCuota(@PathVariable String rut, @PathVariable int cuotaIndex) {
+    @PostMapping("/{rut}/{cuotaIndex}")
+    public ResponseEntity<?> pagarCuota(@PathVariable ("rut") String rut, @PathVariable ("cuotaIndex") int cuotaIndex) {
         EstudianteEntity estudiante = pagoService.buscarEstudiantePorRut(rut);
 
         if (estudiante != null && cuotaIndex >= 0 && cuotaIndex < estudiante.getCantidad_cuotase()) {
