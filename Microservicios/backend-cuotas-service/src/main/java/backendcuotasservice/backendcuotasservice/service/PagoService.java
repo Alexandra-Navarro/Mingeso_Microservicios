@@ -191,6 +191,8 @@ public class PagoService {
         return estados;
     }
 
+
+
     public EstudianteEntity buscarEstudiantePorRut(String rut) {
         System.out.println("rut: " + rut);
         ResponseEntity<EstudianteEntity> response = restTemplate.exchange(
