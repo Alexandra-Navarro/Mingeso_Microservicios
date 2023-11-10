@@ -185,21 +185,28 @@ public class PagoService {
         List<PagoEntity> pagos = pagoRepository.findByMatricula(rut);
 
         for (PagoEntity pago : pagos) {
-            estados.add(pago.getEstadoCuota());
+            estados.add(pago.getEstado_cuota());
         }
 
         return estados;
     }
 
-
     public EstudianteEntity buscarEstudiantePorRut(String rut) {
-        System.out.println("rut: "+ rut);
+        System.out.println("rut: " + rut);
         ResponseEntity<EstudianteEntity> response = restTemplate.exchange(
-                "http://localhost:8085/estudiante/"+ rut,
+                "http://localhost:8085/estudiante/" + rut,
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<EstudianteEntity>() {}
         );
         return response.getBody();
     }
+    public List<PagoEntity> findCuotaByRut(String rut){
+        return pagoRepository.findCuotaByRut(rut);
+    }
+
+
 }
+
+
+

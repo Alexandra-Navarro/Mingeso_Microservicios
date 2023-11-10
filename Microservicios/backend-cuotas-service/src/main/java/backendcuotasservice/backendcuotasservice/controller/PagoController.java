@@ -1,6 +1,5 @@
 package backendcuotasservice.backendcuotasservice.controller;
 
-
 import backendcuotasservice.backendcuotasservice.entity.PagoEntity;
 import backendcuotasservice.backendcuotasservice.model.EstudianteEntity;
 import backendcuotasservice.backendcuotasservice.repository.PagoRepository;
@@ -8,15 +7,15 @@ import backendcuotasservice.backendcuotasservice.service.PagoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @RestController
-@RequestMapping("/api/cuotas") // Cambiado el path para indicar que es una API
+@RequestMapping("/cuotas")
 public class PagoController {
 
     @Autowired
@@ -30,24 +29,24 @@ public class PagoController {
         EstudianteEntity estudiante = pagoService.buscarEstudiantePorRut(rut);
 
         if (estudiante != null) {
-            String[] estadosCuotas = pagoService.listarEstado(estudiante);
+            String[] estados_cuotas = pagoService.listarEstado(estudiante);
             List<PagoEntity> pagos = new ArrayList<>();
             double[] cuotas = pagoService.listarCuotas(estudiante);
-            String[] fechasLimite = pagoService.calcularFechasLimitePago(estudiante);
-            String[] mesesAtraso = pagoService.calcularMesesAtraso(estudiante, fechasLimite);
-            double[] cuotasFinales = new double[cuotas.length];
+            String[] fechas_limite = pagoService.calcularFechasLimitePago(estudiante);
+            String[] meses_atraso = pagoService.calcularMesesAtraso(estudiante, fechas_limite);
+            double[] cuotas_finales = new double[cuotas.length];
 
             for (int i = 0; i < cuotas.length; i++) {
-                cuotasFinales[i] = pagoService.calcularCuotaFinal(estudiante, Integer.parseInt(mesesAtraso[i]), cuotas[i]);
+                cuotas_finales[i] = pagoService.calcularCuotaFinal(estudiante, Integer.parseInt(meses_atraso[i]), cuotas[i]);
 
                 PagoEntity pago = new PagoEntity();
                 pago.setMatricula(estudiante.getRut());
-                pago.setFechaLimitePago(LocalDate.parse(fechasLimite[i]));
-                pago.setMesesAtraso(Integer.parseInt(mesesAtraso[i]));
-                pago.setValorCuota(cuotas[i]);
-                pago.setValorCuotaFinal(cuotasFinales[i]);
-                pago.setCantidadCuotasP(i + 1);
-                pago.setEstadoCuota(estadosCuotas[i]);
+                pago.setFecha_limite_pago(LocalDate.parse(fechas_limite[i]));
+                pago.setMeses_atraso(Integer.parseInt(meses_atraso[i]));
+                pago.setValor_cuota(cuotas[i]);
+                pago.setValor_cuota_final(cuotas_finales[i]);
+                pago.setCantidad_cuotasp(i + 1);
+                pago.setEstado_cuota(estados_cuotas[i]);
                 pagos.add(pago);
             }
 
@@ -55,17 +54,17 @@ public class PagoController {
                 pagoRepository.saveAll(pagos);
             }
 
-            List<String> estadosCuotasFinal = pagoService.obtenerEstadosDeCuotasPorRut(rut);
+            List<String> estados_cuotas_final = pagoService.obtenerEstadosDeCuotasPorRut(rut);
 
             // Construir un objeto JSON de respuesta
             Map<String, Object> response = new HashMap<>();
-            response.put("estadosCuotasFinal", estadosCuotasFinal);
+            response.put("estados_cuotas_final", estados_cuotas_final);
             response.put("estudiante", estudiante);
             response.put("cuotas", cuotas);
-            response.put("cuotasFinales", cuotasFinales);
-            response.put("fechasLimite", fechasLimite);
-            response.put("mesesAtraso", mesesAtraso);
-            response.put("estadosCuotas", estadosCuotas);
+            response.put("cuotas_finales", cuotas_finales);
+            response.put("fechas_limite", fechas_limite);
+            response.put("meses_atraso", meses_atraso);
+            response.put("estados_cuotas", estados_cuotas);
             response.put("pagos", pagos);
 
             return ResponseEntity.ok(response);
@@ -83,7 +82,7 @@ public class PagoController {
 
             if (cuotaIndex < pagos.size()) {
                 PagoEntity pago = pagos.get(cuotaIndex);
-                pago.setEstadoCuota("Pagada");
+                pago.setEstado_cuota("Pagada");
                 pagoRepository.save(pago);
 
                 return ResponseEntity.ok("Cuota pagada exitosamente");
@@ -95,7 +94,3 @@ public class PagoController {
         return ResponseEntity.ok("Estudiante no encontrado");
     }
 }
-
-
-
-

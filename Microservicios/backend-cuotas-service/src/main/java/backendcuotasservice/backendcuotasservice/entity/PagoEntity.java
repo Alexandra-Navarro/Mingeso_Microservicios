@@ -19,13 +19,13 @@ public class PagoEntity {
     @Column(unique = true, nullable = false)
     private int id;
     private String matricula;
-    private Double valorCuota;
-    private Double valorCuotaFinal;
-    private Integer cantidadCuotasP;
-    private LocalDate fechaLimitePago;
-    private LocalDate fechaPagoCuota;
-    private Integer mesesAtraso;
-    private String estadoCuota;
-    private String estadoFinal;
+    private Double valor_cuota;
+    private Double valor_cuota_final;
+    private Integer cantidad_cuotasp;
+    private LocalDate fecha_limite_pago;
+    private LocalDate fecha_pago_cuota;
+    private Integer meses_atraso;
+    private String estado_cuota;
+    private String estado_final;
 }
 
