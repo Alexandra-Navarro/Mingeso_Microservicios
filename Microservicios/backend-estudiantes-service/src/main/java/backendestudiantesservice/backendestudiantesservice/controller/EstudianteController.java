@@ -25,7 +25,7 @@ public class EstudianteController {
 
 
     // Listar estudiantes de la base de datos
-    @GetMapping("/")
+    @GetMapping()
     public ResponseEntity<List<EstudianteEntity>> listar() {
         List<EstudianteEntity> estudianteEntities = estudianteService.findAll();
         return ResponseEntity.ok(estudianteEntities);
