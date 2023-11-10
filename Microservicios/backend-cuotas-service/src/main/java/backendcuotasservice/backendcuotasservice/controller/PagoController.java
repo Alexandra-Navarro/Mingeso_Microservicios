@@ -27,6 +27,8 @@ public class PagoController {
     @GetMapping("/{rut}")
     public ResponseEntity<?> verCuotasEstudiante(@PathVariable("rut") String rut) {
         EstudianteEntity estudiante = pagoService.buscarEstudiantePorRut(rut);
+        List<PagoEntity> pagos_guardados = pagoRepository.findByMatricula(rut);
+
 
         if (estudiante != null) {
             String[] estados_cuotas = pagoService.listarEstado(estudiante);
@@ -50,7 +52,7 @@ public class PagoController {
                 pagos.add(pago);
             }
 
-            if (pagos.isEmpty()){
+            if (pagos_guardados.isEmpty()){
                 pagoRepository.saveAll(pagos);
             }
 
@@ -74,7 +76,7 @@ public class PagoController {
     }
 
     @PostMapping("/{rut}/{cuotaIndex}")
-    public ResponseEntity<?> pagarCuota(@PathVariable ("rut") String rut, @PathVariable ("cuotaIndex") int cuotaIndex) {
+    public ResponseEntity<?> pagarCuota(@PathVariable("rut") String rut, @PathVariable("cuotaIndex") int cuotaIndex) {
         EstudianteEntity estudiante = pagoService.buscarEstudiantePorRut(rut);
 
         if (estudiante != null && cuotaIndex >= 0 && cuotaIndex < estudiante.getCantidad_cuotase()) {
@@ -85,7 +87,14 @@ public class PagoController {
                 pago.setEstado_cuota("Pagada");
                 pagoRepository.save(pago);
 
-                return ResponseEntity.ok("Cuota pagada exitosamente");
+                // Actualizar la lista de pagos en la respuesta si es necesario
+                List<PagoEntity> pagosActualizados = pagoService.obtenerPagosPorMatricula(rut);
+
+                Map<String, Object> response = new HashMap<>();
+                response.put("cuotaIndex", cuotaIndex);
+                response.put("pagos", pagosActualizados);
+
+                return ResponseEntity.ok(response);
             } else {
                 return ResponseEntity.ok("Índice de cuota inválido");
             }

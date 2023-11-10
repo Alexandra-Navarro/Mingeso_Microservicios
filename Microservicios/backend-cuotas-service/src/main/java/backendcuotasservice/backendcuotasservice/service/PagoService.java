@@ -201,9 +201,6 @@ public class PagoService {
         );
         return response.getBody();
     }
-    public List<PagoEntity> findCuotaByRut(String rut){
-        return pagoRepository.findCuotaByRut(rut);
-    }
 
 
 }

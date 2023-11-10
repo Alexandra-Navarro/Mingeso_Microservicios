@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,5 +22,7 @@ public class EstudianteEntity {
     private String forma_pago;
     private Integer cantidad_cuotase;
     private String estado_matricula;
+    private List<Double> cuotas;
+    private List<String> estadosCuotas;
 
 }
