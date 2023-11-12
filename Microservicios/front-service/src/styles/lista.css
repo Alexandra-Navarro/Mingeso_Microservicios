@@ -1,0 +1,13 @@
+
+.table th {
+    background-color: rgb(130, 172, 243); 
+}
+
+.custom-table {
+    width: 100%;
+}
+  
+.custom-table th, .custom-table td {
+    width: 10%; 
+    text-align: center; 
+}

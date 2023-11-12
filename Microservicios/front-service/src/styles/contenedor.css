@@ -1,0 +1,17 @@
+.card-container {
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+  }
+  
+  .card-container p {
+    margin: 0;
+  }
+
+  .card-container {
+    margin-top: 20px;
+    margin-left: 250px;   /* Ajusta el margen izquierdo según tus necesidades */
+    margin-right: 250px;  /* Ajusta el margen derecho según tus necesidades */
+  }

@@ -1,0 +1,7 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../images/fondo2.png') center/cover fixed no-repeat;
+    height: 100vh; /* Ajusta según sea necesario */
+    overflow: auto;
+}
