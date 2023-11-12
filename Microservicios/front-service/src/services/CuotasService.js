@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const CUOTAS_API_URL = "http://localhost:8085/cuotas/";
+const CUOTAS_API_URL = "http://localhost:8080/cuotas/";
 
 class CuotasService {
   obtenerInformacionCuotas(rut) {
