@@ -7,8 +7,8 @@ metadata:
 data:
   MYSQL_DB_HOST: mysql
   #base de dato Cuotas
-  MYSQL_DB_CUOTAS: topeducationcuotas
+  MYSQL_DB_CUOTAS: estudianteservice
   #base de dato Estudiantes
-  MYSQL_DB_ESTUDIANTES: topeducationestudiantes
+  MYSQL_DB_ESTUDIANTES: estudianteservice
   #base de dato Pruebas
-  MYSQL_DB_PRUEBAS: topeducationpruebas
+  MYSQL_DB_PRUEBAS: estudianteservice
