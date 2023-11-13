@@ -7,6 +7,15 @@
     <list default="true" id="0b998080-ac88-4166-a0ee-4ca88ae6ce60" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../Minikube/mysql-configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Minikube/mysql-configmap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Minikube/mysql-dp-sv-pvc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Minikube/mysql-dp-sv-pvc.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend-cuotas-service/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-cuotas-service/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend-estudiantes-service/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-estudiantes-service/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend-gateway-service/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-gateway-service/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend-pruebas-service/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-pruebas-service/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backendconfig-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../backendconfig-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-data/backend-cuotas-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../config-data/backend-cuotas-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-data/backend-estudiantes-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../config-data/backend-estudiantes-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-data/backend-gateway-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../config-data/backend-gateway-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-data/backend-pruebas-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../config-data/backend-pruebas-service.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

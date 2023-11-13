@@ -60,7 +60,6 @@ spec:
                 secretKeyRef:
                   name: mysql-root-credentials
                   key: MYSQL_ROOT_PASSWORD
-
             - name: MYSQL_PASSWORD
               valueFrom:
                 secretKeyRef:

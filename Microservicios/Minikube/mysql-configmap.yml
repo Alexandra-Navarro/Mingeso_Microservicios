@@ -5,10 +5,10 @@ metadata:
   labels:
     app: mysql-config-map
 data:
-  MYSQL_DB_HOST: "mysql"
+  MYSQL_DB_HOST: mysql
   #base de dato Cuotas
-  MYSQL_DB_CUOTAS: "cuotaservice"
+  MYSQL_DB_CUOTAS: cuotaservice
   #base de dato Estudiantes
-  MYSQL_DB_ESTUDIANTES: "estudianteservice"
+  MYSQL_DB_ESTUDIANTES: estudianteservice
   #base de dato Pruebas
-  MYSQL_DB_PRUEBAS: "pruebaservice"
+  MYSQL_DB_PRUEBAS: pruebaservice
