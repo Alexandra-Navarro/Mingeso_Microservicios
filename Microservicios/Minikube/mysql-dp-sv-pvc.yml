@@ -11,7 +11,8 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/Users/Alexa/docker/mysql/docker-pg-vol/data"
+    path: "/Users/Alexa/docker/devenvironments/data"
+
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -59,11 +60,7 @@ spec:
                 secretKeyRef:
                   name: mysql-root-credentials
                   key: MYSQL_ROOT_PASSWORD
-            - name: MYSQL_USER
-              valueFrom:
-                secretKeyRef:
-                  name: mysql-credentials
-                  key: MYSQL_USER
+
             - name: MYSQL_PASSWORD
               valueFrom:
                 secretKeyRef:

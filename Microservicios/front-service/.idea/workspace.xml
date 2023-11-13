@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0b998080-ac88-4166-a0ee-4ca88ae6ce60" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../config-data/backend-gateway-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../config-data/backend-gateway-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Minikube/mysql-configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Minikube/mysql-configmap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Minikube/mysql-dp-sv-pvc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Minikube/mysql-dp-sv-pvc.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +20,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2Y5XgT1lqW5XUnydbUnl5wOTmgJ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,7 +36,9 @@
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/Alexa/Desktop/defin/Mingeso_Microservicios/Microservicios/front-service",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -45,6 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1699816525087</updated>
       <workItem from="1699816526180" duration="9000" />
+      <workItem from="1699829703733" duration="1211000" />
     </task>
     <servers />
   </component>
