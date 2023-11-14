@@ -23,9 +23,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend-service
+  name: front-service
   labels:
-    app: frontend-service
+    app: front-service
 spec:
   selector:
     app: frontend-deployment

@@ -12,7 +12,6 @@ spec:
     - ReadWriteOnce
   hostPath:
     path: "/Users/Alexa/docker/devenvironments/data"
-
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -58,11 +57,6 @@ spec:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: mysql-root-credentials
-                  key: MYSQL_ROOT_PASSWORD
-            - name: MYSQL_PASSWORD
-              valueFrom:
-                secretKeyRef:
                   name: mysql-credentials
                   key: MYSQL_PASSWORD
             - name: MYSQL_DB_CUOTAS
@@ -75,6 +69,11 @@ spec:
                 configMapKeyRef:
                   name: mysql-config-map
                   key: MYSQL_DB_ESTUDIANTES
+            - name: MYSQL_DB_PRUEBAS
+              valueFrom:
+                configMapKeyRef:
+                  name: mysql-config-map
+                  key: MYSQL_DB_PRUEBAS
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: db-data
