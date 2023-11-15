@@ -1,0 +1,145 @@
+
+cd backendconfig-service
+mvn clean install -DskipTests=True
+docker build -t alexandra26/topeducation-config-mysql .
+docker push alexandra26/topeducation-config-mysql
+cd ../
+
+cd backend-eureka-service
+mvn clean install -DskipTests=True
+docker build -t alexandra26/topeducation-eureka-mysql .
+docker push alexandra26/topeducation-eureka-mysql
+cd ../
+
+cd backend-gateway-service
+mvn clean install -DskipTests=True
+docker build -t alexandra26/topeducation-gateway-mysql .
+docker push alexandra26/topeducation-gateway-mysql
+cd ../
+
+cd backend-estudiantes-service
+mvn clean install -DskipTests=True
+docker build -t alexandra26/topeducation-estudiantes-mysql .
+docker push alexandra26/topeducation-estudiantes-mysql
+cd ../
+
+cd backend-cuotas-service
+mvn clean install -DskipTests=True
+docker build -t alexandra26/topeducation-cuotas-mysql .
+docker push alexandra26/topeducation-cuotas-mysql
+cd ../
+
+cd backend-pruebas-service
+mvn clean install -DskipTests=True
+docker build -t alexandra26/topeducation-pruebas-mysql .
+docker push alexandra26/topeducation-pruebas-mysql
+cd ../
+
+
+cd front-service
+mvn clean install -DskipTests=True
+docker build -t alexandra26/topeducation-frontend-mysql .
+docker push alexandra26/topeducation-frontend-mysql
+cd ../
+
+--------------------------------------------------------------------
+
+minikube start
+minikube status
+
+cd Minikube
+
+kubectl apply -f frontend-deployment-service.yml
+
+kubectl apply -f mysql-secrets.yml
+kubectl apply -f mysql-configmap.yml
+kubectl apply -f mysql-dp-sv-pvc.yml
+
+kubectl apply -f backendconfig-deployment-service.yml
+kubectl apply -f backend-eureka-deployment-service.yml
+
+kubectl apply -f backend-estudiantes-deployment-service.yml
+kubectl apply -f backend-cuotas-deployment-service.yml
+kubectl apply -f backend-pruebas-deployment-service.yml
+kubectl apply -f backend-gateway-deployment-service.yml
+
+
+kubectl exec -it <Nombre pod MYSQL> -- mysql -uroot -proot
+
+CREATE DATABASE cuotaservice;
+CREATE DATABASE estudianteservice;
+CREATE DATABASE pruebaservice;
+
+minikube service frontend-service
+minikube tunnel
+
+
+
+---------------------------------------------------------------
+
+
+
+kubectl delete deployments frontend-deployment
+kubectl delete services frontend-service
+
+kubectl delete deployments mysql
+kubectl delete services mysql
+kubectl delete PersistentVolumeClaims mysql-persistent-volume-claim
+kubectl delete PersistentVolumes mysql-persistent-volume-claim
+
+kubectl delete ConfigMap mysql-config-map
+
+kubectl delete Secret mysql-credentials
+
+kubectl delete deployments backend-config-deployment
+kubectl delete services backend-config-service
+
+kubectl delete deployments backend-eureka-deployment
+kubectl delete services backend-eureka-service
+
+kubectl delete deployments backend-gateway-deployment
+kubectl delete services backend-gateway-service
+
+kubectl delete deployments backend-estudiantes-deployment
+kubectl delete services backend-estudiantes-service
+
+kubectl delete deployments backend-cuotas-deployment
+kubectl delete services backend-cuotas-service
+
+kubectl delete services --all
+kubectl delete deployments --all
+kubectl delete ConfigMap --all
+kubectl delete Secret --all
+kubectl delete PersistentVolumes --all
+kubectl delete PersistentVolumeClaims --all
+
+
+---------------------------------------------------------
+
+
+
+kubectl get pods
+kubectl get services
+kubectl get deployments
+kubectl get persistentvolumeclaims
+kubectl get persistentvolume
+kubectl get configmaps
+kubectl get secrets
+
+kubectl get all
+
+kubectl logs <Name pods>
+kubectl logs <Name pods> -f
+
+kubectl port-forward <nombre-pod> <puerto-local>:<puerto-contenedor>
+
+kubectl exec -it <Nombre pod MYSQL> -- mysql -uroot -proot
+
+CREATE DATABASE topeducationcuotas;
+CREATE DATABASE topeducationestudiantes;
+
+Para visualizar las base de datos
+SHOW DATABASES;
+
+minikube service frontend-service
+minikube tunnel

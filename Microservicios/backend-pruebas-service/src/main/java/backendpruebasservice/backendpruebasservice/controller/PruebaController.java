@@ -16,7 +16,6 @@ import java.util.Map;
 
 
 @RestController
-
 @RequestMapping("/pruebas")
 public class PruebaController {
     @Autowired

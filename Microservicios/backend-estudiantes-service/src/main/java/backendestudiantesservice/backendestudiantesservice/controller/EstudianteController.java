@@ -3,7 +3,6 @@ package backendestudiantesservice.backendestudiantesservice.controller;
 import backendestudiantesservice.backendestudiantesservice.entity.EstudianteEntity;
 import backendestudiantesservice.backendestudiantesservice.service.EstudianteService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

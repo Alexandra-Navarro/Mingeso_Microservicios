@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b998080-ac88-4166-a0ee-4ca88ae6ce60" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Minikube/backend-estudiantes-deployment-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Minikube/backend-estudiantes-deployment-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Minikube/backend-pruebas-deployment-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Minikube/backend-pruebas-deployment-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Minikube/frontend-deployment-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Minikube/frontend-deployment-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Minikube/mysql-configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Minikube/mysql-configmap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Minikube/mysql-dp-sv-pvc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Minikube/mysql-dp-sv-pvc.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Minikube/mysql-secrets.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Minikube/mysql-secrets.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend-cuotas-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-cuotas-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend-cuotas-service/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-cuotas-service/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend-estudiantes-service/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-estudiantes-service/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend-gateway-service/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-gateway-service/src/main/resources/bootstrap.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend-pruebas-service/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-pruebas-service/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend-cuotas-service/src/main/java/backendcuotasservice/backendcuotasservice/controller/PagoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-cuotas-service/src/main/java/backendcuotasservice/backendcuotasservice/controller/PagoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend-estudiantes-service/src/main/java/backendestudiantesservice/backendestudiantesservice/controller/EstudianteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-estudiantes-service/src/main/java/backendestudiantesservice/backendestudiantesservice/controller/EstudianteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend-pruebas-service/src/main/java/backendpruebasservice/backendpruebasservice/controller/PruebaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend-pruebas-service/src/main/java/backendpruebasservice/backendpruebasservice/controller/PruebaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-data/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../config-data/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +57,8 @@
       <workItem from="1699829703733" duration="1211000" />
       <workItem from="1699851393614" duration="651000" />
       <workItem from="1699887800393" duration="745000" />
-      <workItem from="1699920273113" duration="2925000" />
+      <workItem from="1699920273113" duration="3165000" />
+      <workItem from="1700006766913" duration="1744000" />
     </task>
     <servers />
   </component>
