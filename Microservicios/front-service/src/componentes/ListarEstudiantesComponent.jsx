@@ -23,7 +23,6 @@ function ListarEstudiantesComponent() {
 
     const verCuotas = (rut) => {
         console.log(`Ver cuotas del estudiante con rut: ${rut}`);
-        // Asegúrate de que 'navigate' sea una función antes de llamarla
         if (typeof navigate === 'function') {
           navigate(`/listar_cuotas/${rut}`);
         }

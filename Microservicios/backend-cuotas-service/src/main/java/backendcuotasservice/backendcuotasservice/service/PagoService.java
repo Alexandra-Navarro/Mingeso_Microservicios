@@ -196,7 +196,7 @@ public class PagoService {
     public EstudianteEntity buscarEstudiantePorRut(String rut) {
         System.out.println("rut: " + rut);
         ResponseEntity<EstudianteEntity> response = restTemplate.exchange(
-                "http://localhost:8085/estudiante/" + rut,
+                "http://backend-gateway-service:8085/estudiante/" + rut,
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<EstudianteEntity>() {}

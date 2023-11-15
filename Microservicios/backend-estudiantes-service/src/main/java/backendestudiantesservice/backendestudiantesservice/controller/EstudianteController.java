@@ -15,7 +15,6 @@ public class EstudianteController {
     @Autowired
     private EstudianteService estudianteService;
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping()
     public ResponseEntity<EstudianteEntity> newEstudiante(@RequestBody EstudianteEntity estudiante) {
         estudianteService.save(estudiante);

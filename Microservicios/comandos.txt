@@ -49,8 +49,6 @@ minikube status
 
 cd Minikube
 
-kubectl apply -f frontend-deployment-service.yml
-
 kubectl apply -f mysql-secrets.yml
 kubectl apply -f mysql-configmap.yml
 kubectl apply -f mysql-dp-sv-pvc.yml
@@ -63,6 +61,8 @@ kubectl apply -f backend-cuotas-deployment-service.yml
 kubectl apply -f backend-pruebas-deployment-service.yml
 kubectl apply -f backend-gateway-deployment-service.yml
 
+kubectl apply -f frontend-deployment-service.yml
+
 
 kubectl exec -it <Nombre pod MYSQL> -- mysql -uroot -proot
 
@@ -70,7 +70,7 @@ CREATE DATABASE cuotaservice;
 CREATE DATABASE estudianteservice;
 CREATE DATABASE pruebaservice;
 
-minikube service frontend-service
+minikube service front-service
 minikube tunnel
 
 
@@ -141,5 +141,5 @@ CREATE DATABASE topeducationestudiantes;
 Para visualizar las base de datos
 SHOW DATABASES;
 
-minikube service frontend-service
+minikube service front-service
 minikube tunnel
